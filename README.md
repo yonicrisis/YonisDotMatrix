@@ -6,6 +6,10 @@ A small app that can digest images, recreate the image as dot matrix patern and 
 
 LINKS AND REFERENCES:
 
+Neighboor Pixels
+https://processing.org/examples/blur.html
+http://learningprocessing.com/examples/chp15/example-15-13-Convolution
+
 DXF FORMAT
 https://processing.org/reference/libraries/dxf/index.html
 https://github.com/processing/processing/blob/master/java/libraries/dxf/examples/SimpleExport/SimpleExport.pde
