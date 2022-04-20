@@ -1,17 +1,20 @@
 // iniciando, librerías y declaraciones
+import processing.svg.*;
 PImage inputImage;
 
 // definir tamaño de trama y variables para filas y columnas
-int cellSize = 8;
-int dotSize = cellSize-2;
+int cellSize = 20;
+int dotSize = cellSize-4;
 int minDotSize = 2; // tamaño mínimo para cortar
 int cols, rows;
 
 void setup(){
-  size(512, 512);
+  size(1200, 600);
+  //size(1200, 600, SVG, "paneles60.svg"); //para salvar en svg
   
-  // importar imagen y redimensionar
-  inputImage = loadImage("input_image_1.jpg");
+  // importar imagen y redimensionar 
+  //inputImage = loadImage("input_city_1800_600.jpg");
+  inputImage = loadImage("input_image_0.jpg");
   cols = inputImage.width/cellSize;
   rows = inputImage.height/cellSize;
   inputImage.resize(cols, rows);
@@ -30,7 +33,7 @@ void draw(){
     
     // loop cuenta columnas
     for (int j = 0; j < cols; j++) {
-      int pixloc = (k*rows+j); // cuenta el pixel en que estamos
+      int pixloc = (k*cols+j); // cuenta el pixel en que estamos
       println("dot in row: "+k+" column: "+j+" pixel: "+pixloc); //confirmar cuenta de columna
 
       // evalua luminosidad de pixel
